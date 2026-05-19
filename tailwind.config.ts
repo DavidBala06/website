@@ -13,6 +13,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        border: "var(--border)",
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
