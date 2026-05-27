@@ -20,19 +20,19 @@
   }
 
   .dark {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --primary: #fafafa;
-    --primary-foreground: #09090b;
-    --card: #18181b;
-    --card-foreground: #fafafa;
-    --border: #27272a;
-    --input: #27272a;
-    --accent: #27272a;
-    --accent-foreground: #fafafa;
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
-    --ring: #d4d4d8;
+    --background: #05050a;
+    --foreground: #f0f0f5;
+    --primary: #f0f0f5;
+    --primary-foreground: #05050a;
+    --card: rgba(15, 15, 25, 0.7);
+    --card-foreground: #f0f0f5;
+    --border: #1e1e30;
+    --input: #1e1e30;
+    --accent: #161625;
+    --accent-foreground: #f0f0f5;
+    --muted: #161625;
+    --muted-foreground: #8888a0;
+    --ring: #d4d4e0;
   }
 }
 
@@ -44,4 +44,30 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Glow keyframes for reuse */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
 }

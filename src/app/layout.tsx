@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Modern Portfolio",
-  description: "A professional portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
+  title: "David Bala — Physics & AI Researcher",
+  description: "Portfolio of David Bala — exploring the intersection of physics, artificial intelligence, and software engineering.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
+          <AnimatedBackground />
+          <div className="relative flex min-h-screen flex-col z-10">
             <Navbar />
             <main className="flex-1">{children}</main>
           </div>
